@@ -1,1 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monsterrat, sans-serif;
+}
 
+input,
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #53565a;
+}
+
+form {
+  display: block;
+  position: relative;
+}
+
+form::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px;
+  z-index: 1;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(165, 149, 255),
+    rgba(255, 255, 255, 0.684)
+  );
+}
+
+form .form-inner {
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  padding: 30px;
+}
+
+form .form-inner h2 {
+  color: #888;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+form .form-inner .form-group {
+  display: block;
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+form .form-inner .form-group label {
+  display: block;
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 5px;
+  transition: 0.4s;
+}
+
+form .form-inner:focus-within .form-group label {
+  color: rgb(165, 149, 255);
+}
+
+form .form-inner .form-group input {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  transition: 0.4s;
+}
+
+form .form-inner .form-group input:focus {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+form .form-inner input[type="submit"],
+.welcome button {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(165, 149, 255),
+    rgba(255, 255, 255, 0.684)
+  );
+  background-position: 0%;
+  background-size: 200%;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.welcome {
+  width: 100%;
+  max-width: 480px;
+  background-color: #fff;
+  padding: 15px 30px;
+}
+
+.welcome h2 {
+  color: #888;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.welcome h2 span {
+  font-weight: 700;
+  color: rgb(165, 149, 255);
+}
